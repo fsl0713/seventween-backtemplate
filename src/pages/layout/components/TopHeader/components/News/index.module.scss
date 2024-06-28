@@ -1,0 +1,11 @@
+.NewsComponent {
+  :global {
+    .ant-popover-inner {
+      padding-top: 0px;
+
+      .ant-tabs-tab {
+        margin: 0 15px 0 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+.lockPage {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url('../../assets/img/lockLogin.png') no-repeat center;
+  background-size: cover;
+  position: relative;
+
+  :global {
+    .lock-timer {
+      position: absolute;
+      left: 50%;
+      top: 35%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      span {
+        display: block;
+        color: #fff;
+      }
+
+      .time {
+        font-size: 60px;
+        font-weight: 600;
+      }
+
+      .dateTime {
+        margin-top: 15px;
+        font-size: 20px;
+      }
+    }
+
+    .check-lock {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+
+      .check-lock-item {
+        width: 200px;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &:nth-child(1) {
+          margin-right: 20px;
+        }
+
+        &:nth-child(2) {
+          margin-left: 20px;
+
+          .ant-input {
+            padding-right: 50px;
+          }
+        }
+
+        .check-lock-opc {
+          display: flex;
+          align-items: center;
+          height: 32px;
+          line-height: 32px;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translate(0%, -50%);
+
+          .iconfont {
+            cursor: pointer;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react';
+import { ConfigProvider, theme } from 'antd';
+import { Provider } from 'react-redux';
+import Router from './router/index';
+import store from '@/store/index';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ConfigProvider theme={{
+      token: {
+        colorPrimary: '#F559F4'
+      },
+      components: {
+        // Menu: {
+        //   // itemColor: '#000',
+        //   // darkItemColor: '#000'
+        // },
+        Layout: {
+          headerBg: '#fff',
+          headerColor: '#000',
+          siderBg: '#fff'
+        }
+      }
+      // algorithm: theme.darkAlgorithm
+    }}>
+      <Provider store={store}>
+        <Router />
+      </Provider>
+    </ConfigProvider>
   );
 }
 
